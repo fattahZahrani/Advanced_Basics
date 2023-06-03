@@ -1,3 +1,4 @@
+import khodro.Khodro;
 import khodro.Motor;
 import org.junit.jupiter.api.Test;
 
@@ -7,7 +8,7 @@ public class MotorTest {
 
     @Test
     void Motor_bayad_harekat_konad_vaghty_roshan_ast() {
-        Motor motor = new Motor();
+        Khodro motor = new Motor();
 
         motor.roshan();
         boolean ayaHarekatMikonad = motor.ayaDarHaleHarekatAst();
