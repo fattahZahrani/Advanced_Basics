@@ -1,7 +1,6 @@
-import org.junit.jupiter.api.Assertions;
+import khodro.Mashin;
 import org.junit.jupiter.api.Test;
 
-import static java.lang.System.out;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -9,20 +8,20 @@ public class MashinTest {
 
     @Test
     void Mashin_bayad_harekat_konad_vaghty_dar_baste_ast_va_mashin_roshan_ast() {
-        //Given
         Mashin benz = new Mashin("benz");
         Mashin volvo = new Mashin("volvo");
-        //When
-        boolean ayaHarekatMikonad = benz.ayaMashinDarHaleHarekatAst();
+
+        boolean ayaHarekatMikonad = benz.ayaDarHaleHarekatAst();
         volvo.roshan();
-        boolean ayaVolvoHarekatMikonad = volvo.ayaMashinDarHaleHarekatAst();
-        //Then
+        boolean ayaVolvoHarekatMikonad = volvo.ayaDarHaleHarekatAst();
+
         assertFalse(ayaHarekatMikonad);
         assertTrue(ayaVolvoHarekatMikonad);
 
 
+//      ----------------------------------------------------------------------------------------------------
         //Objects
-//        Mashin mashin = new Mashin();
+//        mashin.Mashin mashin = new mashin.Mashin();
 //        mashin.bazKardanDar();
 //        mashin.basteKardanDar();
 //        mashin.harekat();
@@ -31,56 +30,10 @@ public class MashinTest {
 //
 //        System.out.println("-----------------------------------------------------------");
 //
-//        Mashin pride = new Mashin("pride");
+//        mashin.Mashin pride = new mashin.Mashin("pride");
 //        pride.roshan();
 //        pride.bazKardanDar();
 //        pride.harekat();
     }
-
-    class Mashin{
-
-        //Constructor
-        Mashin() {
-            out.println("Yek mashin bedone dade sakhted shod.");
-        }
-
-        Mashin(String mark){
-            this.mark = mark;
-            out.println("Yek mashin " + this.mark + " sakhte shod.");
-        }
-
-        //dade:
-
-        boolean ayaMashinRoshanAst; //false
-        boolean ayaDarMashinBazAst; //false
-        String mark;
-
-        //method:
-
-        void roshan(){
-            out.println("Mashin roshan ast.");
-            ayaMashinRoshanAst = true;
-        }
-        void khamoush(){
-            out.println("Mashin khamoush ast.");
-            ayaMashinRoshanAst = false;
-        }
-        void bazKardanDar(){
-            out.println("Dar baz shod.");
-            ayaDarMashinBazAst = true;
-        }
-        void basteKardanDar(){
-            out.println("Dar baste shod.");
-            ayaDarMashinBazAst = false;
-        }
-        boolean ayaMashinDarHaleHarekatAst(){  //dar baste bashad va mashin roshan bashad (rule)
-            if(!ayaDarMashinBazAst && ayaMashinRoshanAst){
-                out.println("Mashin dar hale harekat ast.");
-                return true;
-            } else{
-                out.println("Mashin park ast.");
-                return false;
-            }
-        }
-    }
 }
+
