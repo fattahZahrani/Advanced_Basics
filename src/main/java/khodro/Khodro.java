@@ -2,7 +2,11 @@ package khodro;
 
 public abstract class Khodro {
     //Car is a vehicle. (Liskov Substitution Principle)
-    boolean ayaRoshanAst; //false
+    protected boolean ayaRoshanAst; //false
+
+    protected void protectedMethod(){
+        System.out.println("This is a protected method.");
+    }
 
     public void roshan() {
 

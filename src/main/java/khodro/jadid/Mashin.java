@@ -1,4 +1,9 @@
-package khodro;
+package khodro.jadid;
+
+import khodro.Gearbox;
+import khodro.Khodro;
+import khodro.Ranande;
+import khodro.SandoghDar;
 
 public class Mashin extends Khodro implements SandoghDar, Gearbox {
     //Constructor
@@ -10,11 +15,11 @@ public class Mashin extends Khodro implements SandoghDar, Gearbox {
 
     //dade:
 
-    boolean ayaDarBazAst; //false
-    String mark;
-    int gonjayeshSandogh;
-    String noeDande;
-    Ranande ranande;
+    private boolean ayaDarBazAst; //false
+    private String mark;
+    private int gonjayeshSandogh;
+    private String noeDande;
+    private Ranande ranande;
 
     public Mashin(String mark, int gonjayeshSandogh, String noeDande) {
         this.mark = mark;
@@ -30,7 +35,8 @@ public class Mashin extends Khodro implements SandoghDar, Gearbox {
     void basteKardanDar(){
         ayaDarBazAst = false;
     }
-    public boolean ayaDarHaleHarekatAst(){  //dar baste bashad va mashin roshan bashad (rule)
+    public boolean ayaDarHaleHarekatAst(){//dar baste bashad va mashin roshan bashad (rule)
+        protectedMethod();
         if(!ayaDarBazAst && ayaRoshanAst){
             return true;
         } else{
