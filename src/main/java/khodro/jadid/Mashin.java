@@ -6,7 +6,11 @@ import khodro.Ranande;
 import khodro.SandoghDar;
 
 public class Mashin extends Khodro implements SandoghDar, Gearbox {
+    public static int tedadeForoush;
     //Constructor
+    public Mashin(){
+
+    }
 
     public Mashin(String mark){
 
